@@ -39,6 +39,7 @@ class SqsQueue extends Queue implements QueueContract
      */
     public function __construct(SqsClient $sqs, $default, $prefix = '')
     {
+        info('init sqs queue');
         $this->sqs = $sqs;
         $this->prefix = $prefix;
         $this->default = $default;
